@@ -1,0 +1,18 @@
+.DS_Store
+.idea
+/evaluation/test_scripts/
+/approach/.ipynb_checkpoints/
+/approach/example.xlsx
+/approach/__pycache__/
+/evaluation/__pycache__/
+/scripts/__pycache__/
+/tests/__pycache__/
+/__pycache__/
+conf.json
+.venv
+*.pyc
+
+# Third-party / legacy model results (not part of this study)
+/results/Claude-*/
+/results/GPT-*/
+/results/GPT-4*/
