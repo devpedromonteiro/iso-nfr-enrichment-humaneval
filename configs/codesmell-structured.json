@@ -1,0 +1,45 @@
+{
+  "_readme": "codesmell (Maintainability (Modularity, Analysability)) - condition 'structured'. RQ1/HumanEval, generation+evaluation. Run: NFRGEN_EXPERIMENT=configs/codesmell-structured.json python nfrgen_experiment.py. Keep the SAME date across the 3 conditions of an NFR so the paired analysis lines up.",
+  "phases": [
+    "generation",
+    "evaluation"
+  ],
+  "generation": {
+    "enabled": true,
+    "benchmark": "humaneval",
+    "mode": "rq1",
+    "nfr_prompt_set": "codesmell",
+    "prompt_format": "structured",
+    "serialization": "json",
+    "filename_slug": "codesmell-structured",
+    "model_filename_slug": "gpt-54-2026-03-05",
+    "model": {
+      "id": "gpt-5.4-2026-03-05"
+    },
+    "date": "2026-06-13",
+    "max_prompts": null,
+    "use_second_step_enhancement": false,
+    "rq2_baseline_jsonl": []
+  },
+  "evaluation": {
+    "enabled": true,
+    "dataset": "humaneval",
+    "jsonl_paths": [
+      "../approach/2026-06-13-gpt-54-2026-03-05-t00-GenPrompt-codesmell-structured-prompt0-Trail0.jsonl",
+      "../approach/2026-06-13-gpt-54-2026-03-05-t00-GenPrompt-codesmell-structured-prompt1-Trail0.jsonl",
+      "../approach/2026-06-13-gpt-54-2026-03-05-t00-GenPrompt-codesmell-structured-prompt2-Trail0.jsonl",
+      "../approach/2026-06-13-gpt-54-2026-03-05-t00-GenPrompt-codesmell-structured-prompt3-Trail0.jsonl",
+      "../approach/2026-06-13-gpt-54-2026-03-05-t00-GenPrompt-codesmell-structured-prompt4-Trail0.jsonl",
+      "../approach/2026-06-13-gpt-54-2026-03-05-t00-GenPrompt-codesmell-structured-prompt5-Trail0.jsonl",
+      "../approach/2026-06-13-gpt-54-2026-03-05-t00-GenPrompt-codesmell-structured-prompt6-Trail0.jsonl",
+      "../approach/2026-06-13-gpt-54-2026-03-05-t00-GenPrompt-codesmell-structured-prompt7-Trail0.jsonl",
+      "../approach/2026-06-13-gpt-54-2026-03-05-t00-GenPrompt-codesmell-structured-prompt8-Trail0.jsonl",
+      "../approach/2026-06-13-gpt-54-2026-03-05-t00-GenPrompt-codesmell-structured-prompt9-Trail0.jsonl"
+    ],
+    "report_task": "codesmell",
+    "approach": "direct",
+    "model_label": "gpt-5.4-2026-03-05",
+    "target_excel": "../results/2026-06-13-gpt-54-2026-03-05-rq1-humaneval-3conditions/radon-correct-code-analysis-codesmell-structured.xlsx",
+    "run_rq2_summary_table": false
+  }
+}

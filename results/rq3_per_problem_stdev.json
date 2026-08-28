@@ -1,0 +1,810 @@
+{
+  "description": "Per-problem STDEV across 10 prompt variations; paired Wilcoxon vs NL-simple.",
+  "metrics": [
+    "pass",
+    "unreadability",
+    "code_smell",
+    "exception"
+  ],
+  "interpretation": {
+    "lower_stdev_better": true,
+    "cliffs_delta": "delta<0 favors intervention (lower per-problem STDEV than NL-simple)",
+    "holm_family": "per (NFR, comparison label, all metrics in METRICS)"
+  },
+  "descriptive_mean_stdev": {
+    "Performance": {
+      "NL-s": {
+        "pass": {
+          "mean_per_problem_stdev": 0.049402290576380486,
+          "n_problems": 164
+        },
+        "unreadability": {
+          "mean_per_problem_stdev": 0.6282039457665908,
+          "n_problems": 164
+        },
+        "code_smell": {
+          "mean_per_problem_stdev": 0.03065528558288268,
+          "n_problems": 164
+        },
+        "exception": {
+          "mean_per_problem_stdev": 0.01921478679743245,
+          "n_problems": 164
+        }
+      },
+      "NL-r": {
+        "pass": {
+          "mean_per_problem_stdev": 0.029916744551239913,
+          "n_problems": 164
+        },
+        "unreadability": {
+          "mean_per_problem_stdev": 0.24689309194327835,
+          "n_problems": 164
+        },
+        "code_smell": {
+          "mean_per_problem_stdev": 0.019041226620729726,
+          "n_problems": 164
+        },
+        "exception": {
+          "mean_per_problem_stdev": 0.013001246688765724,
+          "n_problems": 164
+        }
+      },
+      "St": {
+        "pass": {
+          "mean_per_problem_stdev": 0.03911846078721502,
+          "n_problems": 164
+        },
+        "unreadability": {
+          "mean_per_problem_stdev": 0.38489004541730404,
+          "n_problems": 164
+        },
+        "code_smell": {
+          "mean_per_problem_stdev": 0.014713446536611965,
+          "n_problems": 164
+        },
+        "exception": {
+          "mean_per_problem_stdev": 0.01287910991470682,
+          "n_problems": 164
+        }
+      }
+    },
+    "Error Handling": {
+      "NL-s": {
+        "pass": {
+          "mean_per_problem_stdev": 0.05724502264021077,
+          "n_problems": 164
+        },
+        "unreadability": {
+          "mean_per_problem_stdev": 0.4679656113467354,
+          "n_problems": 164
+        },
+        "code_smell": {
+          "mean_per_problem_stdev": 0.040385124716280224,
+          "n_problems": 164
+        },
+        "exception": {
+          "mean_per_problem_stdev": 0.5403469316417545,
+          "n_problems": 164
+        }
+      },
+      "NL-r": {
+        "pass": {
+          "mean_per_problem_stdev": 0.04747407249091196,
+          "n_problems": 164
+        },
+        "unreadability": {
+          "mean_per_problem_stdev": 0.08583262663136214,
+          "n_problems": 164
+        },
+        "code_smell": {
+          "mean_per_problem_stdev": 0.009601866686289666,
+          "n_problems": 164
+        },
+        "exception": {
+          "mean_per_problem_stdev": 0.18839508569517907,
+          "n_problems": 164
+        }
+      },
+      "St": {
+        "pass": {
+          "mean_per_problem_stdev": 0.05059055342852682,
+          "n_problems": 164
+        },
+        "unreadability": {
+          "mean_per_problem_stdev": 0.08864139580153853,
+          "n_problems": 164
+        },
+        "code_smell": {
+          "mean_per_problem_stdev": 0.011066476581248725,
+          "n_problems": 164
+        },
+        "exception": {
+          "mean_per_problem_stdev": 0.19740664867895838,
+          "n_problems": 164
+        }
+      }
+    },
+    "Code Smell": {
+      "NL-s": {
+        "pass": {
+          "mean_per_problem_stdev": 0.03508236986882285,
+          "n_problems": 164
+        },
+        "unreadability": {
+          "mean_per_problem_stdev": 0.3432030932829529,
+          "n_problems": 164
+        },
+        "code_smell": {
+          "mean_per_problem_stdev": 0.01598819852754415,
+          "n_problems": 164
+        },
+        "exception": {
+          "mean_per_problem_stdev": 0.07010474204464254,
+          "n_problems": 164
+        }
+      },
+      "NL-r": {
+        "pass": {
+          "mean_per_problem_stdev": 0.02659689844316972,
+          "n_problems": 164
+        },
+        "unreadability": {
+          "mean_per_problem_stdev": 0.12888150428004472,
+          "n_problems": 164
+        },
+        "code_smell": {
+          "mean_per_problem_stdev": 0.004011837981253584,
+          "n_problems": 164
+        },
+        "exception": {
+          "mean_per_problem_stdev": 0.04135398326304643,
+          "n_problems": 164
+        }
+      },
+      "St": {
+        "pass": {
+          "mean_per_problem_stdev": 0.02852511652863824,
+          "n_problems": 164
+        },
+        "unreadability": {
+          "mean_per_problem_stdev": 0.15360929975446191,
+          "n_problems": 164
+        },
+        "code_smell": {
+          "mean_per_problem_stdev": 0.005283071694077015,
+          "n_problems": 164
+        },
+        "exception": {
+          "mean_per_problem_stdev": 0.03847404450777369,
+          "n_problems": 164
+        }
+      }
+    },
+    "Readability": {
+      "NL-s": {
+        "pass": {
+          "mean_per_problem_stdev": 0.024359165888289874,
+          "n_problems": 164
+        },
+        "unreadability": {
+          "mean_per_problem_stdev": 0.28062717477218607,
+          "n_problems": 164
+        },
+        "code_smell": {
+          "mean_per_problem_stdev": 0.01701053429274708,
+          "n_problems": 164
+        },
+        "exception": {
+          "mean_per_problem_stdev": 0.023634493579637577,
+          "n_problems": 164
+        }
+      },
+      "NL-r": {
+        "pass": {
+          "mean_per_problem_stdev": 0.018680660930840292,
+          "n_problems": 164
+        },
+        "unreadability": {
+          "mean_per_problem_stdev": 0.06830329317094529,
+          "n_problems": 164
+        },
+        "code_smell": {
+          "mean_per_problem_stdev": 0.009513285040637538,
+          "n_problems": 164
+        },
+        "exception": {
+          "mean_per_problem_stdev": 0.0062671581994369835,
+          "n_problems": 164
+        }
+      },
+      "St": {
+        "pass": {
+          "mean_per_problem_stdev": 0.01444978042951383,
+          "n_problems": 164
+        },
+        "unreadability": {
+          "mean_per_problem_stdev": 0.09951667326183669,
+          "n_problems": 164
+        },
+        "code_smell": {
+          "mean_per_problem_stdev": 0.00878616611378052,
+          "n_problems": 164
+        },
+        "exception": {
+          "mean_per_problem_stdev": 0.008150031456466233,
+          "n_problems": 164
+        }
+      }
+    }
+  },
+  "inferential": {
+    "Performance": {
+      "NL-r vs NL-s": [
+        {
+          "comparison": "performance:NL-r vs NL-s:pass",
+          "n_problems": 164,
+          "median_a": 0.0,
+          "median_b": 0.0,
+          "wilcoxon_stat": 64.0,
+          "p_value": 0.04359874792335172,
+          "cliffs_delta": -0.05324211778703153,
+          "effect_magnitude": "negligible",
+          "mean_stdev_intervention": 0.029916744551239913,
+          "mean_stdev_baseline": 0.049402290576380486,
+          "pct_reduction": 39.4425962800533,
+          "metric": "pass",
+          "metric_label": "Pass@1 STDEV",
+          "p_holm": 0.13079624377005517,
+          "significant_holm_005": false
+        },
+        {
+          "comparison": "performance:NL-r vs NL-s:unreadability",
+          "n_problems": 164,
+          "median_a": 0.06145809115964534,
+          "median_b": 0.20097396534913375,
+          "wilcoxon_stat": 2097.0,
+          "p_value": 6.22668583361019e-11,
+          "cliffs_delta": -0.22051606186793576,
+          "effect_magnitude": "small",
+          "mean_stdev_intervention": 0.24689309194327835,
+          "mean_stdev_baseline": 0.6282039457665908,
+          "pct_reduction": 60.69857669518499,
+          "metric": "unreadability",
+          "metric_label": "Unread. STDEV",
+          "p_holm": 2.490674333444076e-10,
+          "significant_holm_005": true
+        },
+        {
+          "comparison": "performance:NL-r vs NL-s:code_smell",
+          "n_problems": 164,
+          "median_a": 0.0,
+          "median_b": 0.0,
+          "wilcoxon_stat": 111.0,
+          "p_value": 0.16996552349680671,
+          "cliffs_delta": -0.0313429506246282,
+          "effect_magnitude": "negligible",
+          "mean_stdev_intervention": 0.019041226620729726,
+          "mean_stdev_baseline": 0.03065528558288268,
+          "pct_reduction": 37.885991734613036,
+          "metric": "code_smell",
+          "metric_label": "Smell STDEV",
+          "p_holm": 0.284490338768268,
+          "significant_holm_005": false
+        },
+        {
+          "comparison": "performance:NL-r vs NL-s:exception",
+          "n_problems": 164,
+          "median_a": 0.0,
+          "median_b": 0.0,
+          "wilcoxon_stat": 45.0,
+          "p_value": 0.142245169384134,
+          "cliffs_delta": 0.008068114217727544,
+          "effect_magnitude": "negligible",
+          "mean_stdev_intervention": 0.013001246688765724,
+          "mean_stdev_baseline": 0.01921478679743245,
+          "pct_reduction": 32.33728364603557,
+          "metric": "exception",
+          "metric_label": "Exc. STDEV",
+          "p_holm": 0.284490338768268,
+          "significant_holm_005": false
+        }
+      ],
+      "St vs NL-s": [
+        {
+          "comparison": "performance:St vs NL-s:pass",
+          "n_problems": 164,
+          "median_a": 0.0,
+          "median_b": 0.0,
+          "wilcoxon_stat": 76.5,
+          "p_value": 0.17889309760091532,
+          "cliffs_delta": -0.025171029149315884,
+          "effect_magnitude": "negligible",
+          "mean_stdev_intervention": 0.03911846078721502,
+          "mean_stdev_baseline": 0.049402290576380486,
+          "pct_reduction": 20.81650399036805,
+          "metric": "pass",
+          "metric_label": "Pass@1 STDEV",
+          "p_holm": 0.2950648384744463,
+          "significant_holm_005": false
+        },
+        {
+          "comparison": "performance:St vs NL-s:unreadability",
+          "n_problems": 164,
+          "median_a": 0.07789998691602282,
+          "median_b": 0.20097396534913375,
+          "wilcoxon_stat": 2364.0,
+          "p_value": 1.2356276002378763e-08,
+          "cliffs_delta": -0.18222040452111837,
+          "effect_magnitude": "small",
+          "mean_stdev_intervention": 0.38489004541730404,
+          "mean_stdev_baseline": 0.6282039457665908,
+          "pct_reduction": 38.73167336642136,
+          "metric": "unreadability",
+          "metric_label": "Unread. STDEV",
+          "p_holm": 4.942510400951505e-08,
+          "significant_holm_005": true
+        },
+        {
+          "comparison": "performance:St vs NL-s:code_smell",
+          "n_problems": 164,
+          "median_a": 0.0,
+          "median_b": 0.0,
+          "wilcoxon_stat": 81.0,
+          "p_value": 0.050330674896503336,
+          "cliffs_delta": -0.03941106484235574,
+          "effect_magnitude": "negligible",
+          "mean_stdev_intervention": 0.014713446536611965,
+          "mean_stdev_baseline": 0.03065528558288268,
+          "pct_reduction": 52.00355743928326,
+          "metric": "code_smell",
+          "metric_label": "Smell STDEV",
+          "p_holm": 0.15099202468951,
+          "significant_holm_005": false
+        },
+        {
+          "comparison": "performance:St vs NL-s:exception",
+          "n_problems": 164,
+          "median_a": 0.0,
+          "median_b": 0.0,
+          "wilcoxon_stat": 34.0,
+          "p_value": 0.14753241923722316,
+          "cliffs_delta": 0.00297441998810232,
+          "effect_magnitude": "negligible",
+          "mean_stdev_intervention": 0.01287910991470682,
+          "mean_stdev_baseline": 0.01921478679743245,
+          "pct_reduction": 32.97292314256761,
+          "metric": "exception",
+          "metric_label": "Exc. STDEV",
+          "p_holm": 0.2950648384744463,
+          "significant_holm_005": false
+        }
+      ]
+    },
+    "Error Handling": {
+      "NL-r vs NL-s": [
+        {
+          "comparison": "errorhandle:NL-r vs NL-s:pass",
+          "n_problems": 164,
+          "median_a": 0.0,
+          "median_b": 0.0,
+          "wilcoxon_stat": 308.5,
+          "p_value": 0.5154576771904598,
+          "cliffs_delta": -0.03242117787031529,
+          "effect_magnitude": "negligible",
+          "mean_stdev_intervention": 0.04747407249091196,
+          "mean_stdev_baseline": 0.05724502264021077,
+          "pct_reduction": 17.068645794255268,
+          "metric": "pass",
+          "metric_label": "Pass@1 STDEV",
+          "p_holm": 0.5154576771904598,
+          "significant_holm_005": false
+        },
+        {
+          "comparison": "errorhandle:NL-r vs NL-s:unreadability",
+          "n_problems": 164,
+          "median_a": 0.05213043217568507,
+          "median_b": 0.2365178458119537,
+          "wilcoxon_stat": 541.0,
+          "p_value": 0.0,
+          "cliffs_delta": -0.7201814396192743,
+          "effect_magnitude": "large",
+          "mean_stdev_intervention": 0.08583262663136214,
+          "mean_stdev_baseline": 0.4679656113467354,
+          "pct_reduction": 81.65834741908735,
+          "metric": "unreadability",
+          "metric_label": "Unread. STDEV",
+          "p_holm": 0.0,
+          "significant_holm_005": true
+        },
+        {
+          "comparison": "errorhandle:NL-r vs NL-s:code_smell",
+          "n_problems": 164,
+          "median_a": 0.0,
+          "median_b": 0.0,
+          "wilcoxon_stat": 114.0,
+          "p_value": 2.7265338164994546e-07,
+          "cliffs_delta": -0.20017846519928614,
+          "effect_magnitude": "small",
+          "mean_stdev_intervention": 0.009601866686289666,
+          "mean_stdev_baseline": 0.040385124716280224,
+          "pct_reduction": 76.22424901805758,
+          "metric": "code_smell",
+          "metric_label": "Smell STDEV",
+          "p_holm": 5.453067632998909e-07,
+          "significant_holm_005": true
+        },
+        {
+          "comparison": "errorhandle:NL-r vs NL-s:exception",
+          "n_problems": 164,
+          "median_a": 0.17625653912922623,
+          "median_b": 0.5126419505248383,
+          "wilcoxon_stat": 119.0,
+          "p_value": 0.0,
+          "cliffs_delta": -0.8705383700178465,
+          "effect_magnitude": "large",
+          "mean_stdev_intervention": 0.18839508569517907,
+          "mean_stdev_baseline": 0.5403469316417545,
+          "pct_reduction": 65.13442111667557,
+          "metric": "exception",
+          "metric_label": "Exc. STDEV",
+          "p_holm": 0.0,
+          "significant_holm_005": true
+        }
+      ],
+      "St vs NL-s": [
+        {
+          "comparison": "errorhandle:St vs NL-s:pass",
+          "n_problems": 164,
+          "median_a": 0.0,
+          "median_b": 0.0,
+          "wilcoxon_stat": 247.5,
+          "p_value": 0.555933197051572,
+          "cliffs_delta": -0.02197352766210589,
+          "effect_magnitude": "negligible",
+          "mean_stdev_intervention": 0.05059055342852682,
+          "mean_stdev_baseline": 0.05724502264021077,
+          "pct_reduction": 11.624537653706223,
+          "metric": "pass",
+          "metric_label": "Pass@1 STDEV",
+          "p_holm": 0.555933197051572,
+          "significant_holm_005": false
+        },
+        {
+          "comparison": "errorhandle:St vs NL-s:unreadability",
+          "n_problems": 164,
+          "median_a": 0.055321990735583366,
+          "median_b": 0.2365178458119537,
+          "wilcoxon_stat": 701.0,
+          "p_value": 0.0,
+          "cliffs_delta": -0.7165377751338489,
+          "effect_magnitude": "large",
+          "mean_stdev_intervention": 0.08864139580153853,
+          "mean_stdev_baseline": 0.4679656113467354,
+          "pct_reduction": 81.05813896315121,
+          "metric": "unreadability",
+          "metric_label": "Unread. STDEV",
+          "p_holm": 0.0,
+          "significant_holm_005": true
+        },
+        {
+          "comparison": "errorhandle:St vs NL-s:code_smell",
+          "n_problems": 164,
+          "median_a": 0.0,
+          "median_b": 0.0,
+          "wilcoxon_stat": 146.0,
+          "p_value": 2.1388425497370633e-06,
+          "cliffs_delta": -0.19389500297442,
+          "effect_magnitude": "small",
+          "mean_stdev_intervention": 0.011066476581248725,
+          "mean_stdev_baseline": 0.040385124716280224,
+          "pct_reduction": 72.59764168367775,
+          "metric": "code_smell",
+          "metric_label": "Smell STDEV",
+          "p_holm": 4.277685099474127e-06,
+          "significant_holm_005": true
+        },
+        {
+          "comparison": "errorhandle:St vs NL-s:exception",
+          "n_problems": 164,
+          "median_a": 0.17512083985171178,
+          "median_b": 0.5126419505248383,
+          "wilcoxon_stat": 153.0,
+          "p_value": 0.0,
+          "cliffs_delta": -0.8561867935752528,
+          "effect_magnitude": "large",
+          "mean_stdev_intervention": 0.19740664867895838,
+          "mean_stdev_baseline": 0.5403469316417545,
+          "pct_reduction": 63.46668462071747,
+          "metric": "exception",
+          "metric_label": "Exc. STDEV",
+          "p_holm": 0.0,
+          "significant_holm_005": true
+        }
+      ]
+    },
+    "Code Smell": {
+      "NL-r vs NL-s": [
+        {
+          "comparison": "codesmell:NL-r vs NL-s:pass",
+          "n_problems": 164,
+          "median_a": 0.0,
+          "median_b": 0.0,
+          "wilcoxon_stat": 93.0,
+          "p_value": 0.43664080140414985,
+          "cliffs_delta": -0.03338786436644854,
+          "effect_magnitude": "negligible",
+          "mean_stdev_intervention": 0.02659689844316972,
+          "mean_stdev_baseline": 0.03508236986882285,
+          "pct_reduction": 24.18728112548073,
+          "metric": "pass",
+          "metric_label": "Pass@1 STDEV",
+          "p_holm": 0.43664080140414985,
+          "significant_holm_005": false
+        },
+        {
+          "comparison": "codesmell:NL-r vs NL-s:unreadability",
+          "n_problems": 164,
+          "median_a": 0.05395147924759095,
+          "median_b": 0.1495366401374784,
+          "wilcoxon_stat": 2690.0,
+          "p_value": 6.137845787179685e-11,
+          "cliffs_delta": -0.37105889351576443,
+          "effect_magnitude": "medium",
+          "mean_stdev_intervention": 0.12888150428004472,
+          "mean_stdev_baseline": 0.3432030932829529,
+          "pct_reduction": 62.44745260096223,
+          "metric": "unreadability",
+          "metric_label": "Unread. STDEV",
+          "p_holm": 2.455138314871874e-10,
+          "significant_holm_005": true
+        },
+        {
+          "comparison": "codesmell:NL-r vs NL-s:code_smell",
+          "n_problems": 164,
+          "median_a": 0.0,
+          "median_b": 0.0,
+          "wilcoxon_stat": 9.5,
+          "p_value": 0.0027032556771870997,
+          "cliffs_delta": -0.05636525877453896,
+          "effect_magnitude": "negligible",
+          "mean_stdev_intervention": 0.004011837981253584,
+          "mean_stdev_baseline": 0.01598819852754415,
+          "pct_reduction": 74.90750459257765,
+          "metric": "code_smell",
+          "metric_label": "Smell STDEV",
+          "p_holm": 0.007782363542751192,
+          "significant_holm_005": true
+        },
+        {
+          "comparison": "codesmell:NL-r vs NL-s:exception",
+          "n_problems": 164,
+          "median_a": 0.0,
+          "median_b": 0.0,
+          "wilcoxon_stat": 410.0,
+          "p_value": 0.002594121180917064,
+          "cliffs_delta": -0.06261154074955384,
+          "effect_magnitude": "negligible",
+          "mean_stdev_intervention": 0.04135398326304643,
+          "mean_stdev_baseline": 0.07010474204464254,
+          "pct_reduction": 41.01114695392174,
+          "metric": "exception",
+          "metric_label": "Exc. STDEV",
+          "p_holm": 0.007782363542751192,
+          "significant_holm_005": true
+        }
+      ],
+      "St vs NL-s": [
+        {
+          "comparison": "codesmell:St vs NL-s:pass",
+          "n_problems": 164,
+          "median_a": 0.0,
+          "median_b": 0.0,
+          "wilcoxon_stat": 105.5,
+          "p_value": 0.4923150597652224,
+          "cliffs_delta": -0.023349196906603212,
+          "effect_magnitude": "negligible",
+          "mean_stdev_intervention": 0.02852511652863824,
+          "mean_stdev_baseline": 0.03508236986882285,
+          "pct_reduction": 18.691021629105897,
+          "metric": "pass",
+          "metric_label": "Pass@1 STDEV",
+          "p_holm": 0.4923150597652224,
+          "significant_holm_005": false
+        },
+        {
+          "comparison": "codesmell:St vs NL-s:unreadability",
+          "n_problems": 164,
+          "median_a": 0.08227575868081738,
+          "median_b": 0.1495366401374784,
+          "wilcoxon_stat": 3415.0,
+          "p_value": 9.933911604420587e-08,
+          "cliffs_delta": -0.26319898869720404,
+          "effect_magnitude": "small",
+          "mean_stdev_intervention": 0.15360929975446191,
+          "mean_stdev_baseline": 0.3432030932829529,
+          "pct_reduction": 55.242448928681675,
+          "metric": "unreadability",
+          "metric_label": "Unread. STDEV",
+          "p_holm": 3.9735646417682347e-07,
+          "significant_holm_005": true
+        },
+        {
+          "comparison": "codesmell:St vs NL-s:code_smell",
+          "n_problems": 164,
+          "median_a": 0.0,
+          "median_b": 0.0,
+          "wilcoxon_stat": 33.0,
+          "p_value": 0.04176805735250522,
+          "cliffs_delta": -0.0499330755502677,
+          "effect_magnitude": "negligible",
+          "mean_stdev_intervention": 0.005283071694077015,
+          "mean_stdev_baseline": 0.01598819852754415,
+          "pct_reduction": 66.95642923763147,
+          "metric": "code_smell",
+          "metric_label": "Smell STDEV",
+          "p_holm": 0.08353611470501043,
+          "significant_holm_005": false
+        },
+        {
+          "comparison": "codesmell:St vs NL-s:exception",
+          "n_problems": 164,
+          "median_a": 0.0,
+          "median_b": 0.0,
+          "wilcoxon_stat": 357.0,
+          "p_value": 0.0015277933252981768,
+          "cliffs_delta": -0.086220999405116,
+          "effect_magnitude": "negligible",
+          "mean_stdev_intervention": 0.03847404450777369,
+          "mean_stdev_baseline": 0.07010474204464254,
+          "pct_reduction": 45.119198237298264,
+          "metric": "exception",
+          "metric_label": "Exc. STDEV",
+          "p_holm": 0.00458337997589453,
+          "significant_holm_005": true
+        }
+      ]
+    },
+    "Readability": {
+      "NL-r vs NL-s": [
+        {
+          "comparison": "readability:NL-r vs NL-s:pass",
+          "n_problems": 164,
+          "median_a": 0.0,
+          "median_b": 0.0,
+          "wilcoxon_stat": 41.0,
+          "p_value": 0.48726847909722704,
+          "cliffs_delta": -0.02267995240928019,
+          "effect_magnitude": "negligible",
+          "mean_stdev_intervention": 0.018680660930840292,
+          "mean_stdev_baseline": 0.024359165888289874,
+          "pct_reduction": 23.3115738999068,
+          "metric": "pass",
+          "metric_label": "Pass@1 STDEV",
+          "p_holm": 0.48726847909722704,
+          "significant_holm_005": false
+        },
+        {
+          "comparison": "readability:NL-r vs NL-s:unreadability",
+          "n_problems": 164,
+          "median_a": 0.04056038781083471,
+          "median_b": 0.1397802852430919,
+          "wilcoxon_stat": 1392.0,
+          "p_value": 0.0,
+          "cliffs_delta": -0.5580755502676978,
+          "effect_magnitude": "large",
+          "mean_stdev_intervention": 0.06830329317094529,
+          "mean_stdev_baseline": 0.28062717477218607,
+          "pct_reduction": 75.66048504518706,
+          "metric": "unreadability",
+          "metric_label": "Unread. STDEV",
+          "p_holm": 0.0,
+          "significant_holm_005": true
+        },
+        {
+          "comparison": "readability:NL-r vs NL-s:code_smell",
+          "n_problems": 164,
+          "median_a": 0.0,
+          "median_b": 0.0,
+          "wilcoxon_stat": 52.0,
+          "p_value": 0.15062364442322385,
+          "cliffs_delta": -0.02052349791790601,
+          "effect_magnitude": "negligible",
+          "mean_stdev_intervention": 0.009513285040637538,
+          "mean_stdev_baseline": 0.01701053429274708,
+          "pct_reduction": 44.07415500938265,
+          "metric": "code_smell",
+          "metric_label": "Smell STDEV",
+          "p_holm": 0.3012472888464477,
+          "significant_holm_005": false
+        },
+        {
+          "comparison": "readability:NL-r vs NL-s:exception",
+          "n_problems": 164,
+          "median_a": 0.0,
+          "median_b": 0.0,
+          "wilcoxon_stat": 13.0,
+          "p_value": 0.001714879752581444,
+          "cliffs_delta": -0.0626859012492564,
+          "effect_magnitude": "negligible",
+          "mean_stdev_intervention": 0.0062671581994369835,
+          "mean_stdev_baseline": 0.023634493579637577,
+          "pct_reduction": 73.48300195932065,
+          "metric": "exception",
+          "metric_label": "Exc. STDEV",
+          "p_holm": 0.005144639257744332,
+          "significant_holm_005": true
+        }
+      ],
+      "St vs NL-s": [
+        {
+          "comparison": "readability:St vs NL-s:pass",
+          "n_problems": 164,
+          "median_a": 0.0,
+          "median_b": 0.0,
+          "wilcoxon_stat": 27.0,
+          "p_value": 0.19997108902828353,
+          "cliffs_delta": -0.029930101130279597,
+          "effect_magnitude": "negligible",
+          "mean_stdev_intervention": 0.01444978042951383,
+          "mean_stdev_baseline": 0.024359165888289874,
+          "pct_reduction": 40.680315180823825,
+          "metric": "pass",
+          "metric_label": "Pass@1 STDEV",
+          "p_holm": 0.2294157340872589,
+          "significant_holm_005": false
+        },
+        {
+          "comparison": "readability:St vs NL-s:unreadability",
+          "n_problems": 164,
+          "median_a": 0.04284079524517639,
+          "median_b": 0.1397802852430919,
+          "wilcoxon_stat": 1422.0,
+          "p_value": 0.0,
+          "cliffs_delta": -0.4899241522903034,
+          "effect_magnitude": "large",
+          "mean_stdev_intervention": 0.09951667326183669,
+          "mean_stdev_baseline": 0.28062717477218607,
+          "pct_reduction": 64.53776319323865,
+          "metric": "unreadability",
+          "metric_label": "Unread. STDEV",
+          "p_holm": 0.0,
+          "significant_holm_005": true
+        },
+        {
+          "comparison": "readability:St vs NL-s:code_smell",
+          "n_problems": 164,
+          "median_a": 0.0,
+          "median_b": 0.0,
+          "wilcoxon_stat": 37.0,
+          "p_value": 0.11470786704362945,
+          "cliffs_delta": -0.031454491374182034,
+          "effect_magnitude": "negligible",
+          "mean_stdev_intervention": 0.00878616611378052,
+          "mean_stdev_baseline": 0.01701053429274708,
+          "pct_reduction": 48.348676399149035,
+          "metric": "code_smell",
+          "metric_label": "Smell STDEV",
+          "p_holm": 0.2294157340872589,
+          "significant_holm_005": false
+        },
+        {
+          "comparison": "readability:St vs NL-s:exception",
+          "n_problems": 164,
+          "median_a": 0.0,
+          "median_b": 0.0,
+          "wilcoxon_stat": 22.0,
+          "p_value": 0.0060756135444979265,
+          "cliffs_delta": -0.05101130279595479,
+          "effect_magnitude": "negligible",
+          "mean_stdev_intervention": 0.008150031456466233,
+          "mean_stdev_baseline": 0.023634493579637577,
+          "pct_reduction": 65.51636941572576,
+          "metric": "exception",
+          "metric_label": "Exc. STDEV",
+          "p_holm": 0.01822684063349378,
+          "significant_holm_005": true
+        }
+      ]
+    }
+  }
+}

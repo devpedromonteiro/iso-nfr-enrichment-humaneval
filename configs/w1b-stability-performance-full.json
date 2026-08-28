@@ -1,0 +1,32 @@
+{
+  "_readme": "W1 Level B: Performance NL-simple, prompt0, all 164 HumanEval tasks, Aug 2026.",
+  "phases": ["generation", "evaluation"],
+  "generation": {
+    "enabled": true,
+    "benchmark": "humaneval",
+    "mode": "rq1",
+    "nfr_prompt_set": "performance",
+    "prompt_format": "natural",
+    "serialization": "json",
+    "filename_slug": "w1b-stability-performance-full",
+    "model_filename_slug": "gpt-54-2026-03-05",
+    "model": { "id": "gpt-5.4-2026-03-05" },
+    "date": "2026-08-07",
+    "max_prompts": 1,
+    "use_second_step_enhancement": false,
+    "rq2_baseline_jsonl": [],
+    "output_dir": "results/w1-stability/2026-08-07"
+  },
+  "evaluation": {
+    "enabled": true,
+    "dataset": "humaneval",
+    "jsonl_paths": [
+      "../results/w1-stability/2026-08-07/2026-08-07-gpt-54-2026-03-05-t00-GenPrompt-w1b-stability-performance-full-prompt0-Trail0.jsonl"
+    ],
+    "report_task": "performance",
+    "approach": "direct",
+    "model_label": "gpt-5.4-2026-03-05",
+    "target_excel": "../results/w1-stability/2026-08-07/radon-correct-code-analysis-w1b-stability-performance-full.xlsx",
+    "run_rq2_summary_table": false
+  }
+}

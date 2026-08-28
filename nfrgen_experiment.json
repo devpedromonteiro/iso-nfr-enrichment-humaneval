@@ -1,0 +1,38 @@
+{
+  "_readme": "readability RQ1 (HumanEval): generation + evaluation. Credentials in conf.json (openai-key for GPT). Run from NFRGen-8175: python3 nfrgen_experiment.py. After generation, .jsonl files land in approach/; evaluation paths below match that. Optional: move outputs to results/2026-04-09-gpt-54-2026-03-05-rq1-humaneval/ and update jsonl_paths to ../results/.../2026-05-27-...-readability-prompt{i}-Trail0.jsonl. For RQ2 improve+baseline use mode rq2, approach sequential, use_second_step_enhancement true, rq2_baseline_jsonl.",
+  "phases": ["generation", "evaluation"],
+  "generation": {
+    "enabled": true,
+    "benchmark": "humaneval",
+    "mode": "rq1",
+    "nfr_prompt_set": "readability",
+    "filename_slug": "readability",
+    "model_filename_slug": "gpt-54-2026-03-05",
+    "model": { "id": "gpt-5.4-2026-03-05" },
+    "date": "2026-05-27",
+    "max_prompts": null,
+    "use_second_step_enhancement": false,
+    "rq2_baseline_jsonl": []
+  },
+  "evaluation": {
+    "enabled": true,
+    "dataset": "humaneval",
+    "jsonl_paths": [
+      "../approach/2026-05-27-gpt-54-2026-03-05-t00-GenPrompt-readability-prompt0-Trail0.jsonl",
+      "../approach/2026-05-27-gpt-54-2026-03-05-t00-GenPrompt-readability-prompt1-Trail0.jsonl",
+      "../approach/2026-05-27-gpt-54-2026-03-05-t00-GenPrompt-readability-prompt2-Trail0.jsonl",
+      "../approach/2026-05-27-gpt-54-2026-03-05-t00-GenPrompt-readability-prompt3-Trail0.jsonl",
+      "../approach/2026-05-27-gpt-54-2026-03-05-t00-GenPrompt-readability-prompt4-Trail0.jsonl",
+      "../approach/2026-05-27-gpt-54-2026-03-05-t00-GenPrompt-readability-prompt5-Trail0.jsonl",
+      "../approach/2026-05-27-gpt-54-2026-03-05-t00-GenPrompt-readability-prompt6-Trail0.jsonl",
+      "../approach/2026-05-27-gpt-54-2026-03-05-t00-GenPrompt-readability-prompt7-Trail0.jsonl",
+      "../approach/2026-05-27-gpt-54-2026-03-05-t00-GenPrompt-readability-prompt8-Trail0.jsonl",
+      "../approach/2026-05-27-gpt-54-2026-03-05-t00-GenPrompt-readability-prompt9-Trail0.jsonl"
+    ],
+    "report_task": "readability",
+    "approach": "direct",
+    "model_label": "gpt-5.4-2026-03-05",
+    "target_excel": "../results/2026-04-08-pylint-radon-meta-results/radon-correct-code-analysis-readability.xlsx",
+    "run_rq2_summary_table": false
+  }
+}
